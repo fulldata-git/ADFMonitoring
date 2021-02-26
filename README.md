@@ -1,7 +1,11 @@
 # FullData ADF Monitoring utility
 
 This Azure Data Factory monitoring utility is solution that records and stores pipeline execution runtimes in an Azure SQL Database and sends out an Email alert when a threshold limit is exceeded. Its developed by FullData and provided ‘AS-IS’ to the Microsoft Data Platform community.
+
+
 When your Azure Data Factory environment is consuming a lot of resources due some unforeseen failing or /long running job s you would want to be informed right away rather then after receiving a serious bill. An ADF environment easily spans 100+ pipelines that execute b. But not all actions may be properly logged as status ‘Completed’ or and get stuck as ‘InProgress’. The current standard Azure generic monitoring signal logic does not cover the full range of scenarios.
+
+
 To avoid surprises and to provide more granular insights and alerting, the FullData team developed a simple and efficient service that will email you when the duration of pipeline activities exceeds 2x the average duration or any other configurable alarm threshold that you as user can set by querying by querying the Azure management API directly. This is more reliable than leveraging the Azure Log Analytics data as source.
 
 
@@ -9,12 +13,15 @@ todo:
 1) Insert pictures of overall architecture ( adf-> FD monitor -> SQLDB -> sendgrid)  
 2) Inserrt picture of a API call example:
 
+![image](https://user-images.githubusercontent.com/79724599/109359528-a224e600-78ab-11eb-8666-37e4041e8037.png)
 
 Figure 1:  Raw API output.
 
 
 The ADF Monitoring utility will update table [internal].[AzureADFPipeLinesExecutionData] every hour with the latest information: 
- 
+
+![image](https://user-images.githubusercontent.com/79724599/109359548-ae10a800-78ab-11eb-97e8-42499db56245.png)
+
 Figure 2: Sample of the persisted ADF pipeline details
 
 
