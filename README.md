@@ -72,7 +72,7 @@ Please make sure to update tests as appropriate.
 
 ## Full Data ADF Monitoring - The complete solution
 
-In addition to the gathering the base ADF monitoring data we can help you visualize trends and resolve ADF pipeline challenges and optimize their runtimes minimizing cost and maximizing efficiency.
+In addition to the gathering the base ADF monitoring data we can help you to visualize trends and resolve ADF pipeline challenges to minimize cost and maximize efficiency.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
