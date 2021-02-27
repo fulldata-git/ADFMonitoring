@@ -1,6 +1,6 @@
 # FullData ADF Monitoring utility
 
-This Azure Data Factory monitoring utility is solution that records and stores pipeline execution runtimes in an Azure SQL Database and sends out an Email alert when a threshold limit is exceeded. Its developed by FullData and provided ‘AS-IS’ to the Microsoft Data Platform community.
+This Azure Data Factory monitoring utility is a solution that records and stores pipeline execution runtimes in an Azure SQL Database and sends out an Email alert when a threshold limit is exceeded. Its developed by FullData and provided ‘AS-IS’ to the Microsoft Data Platform community.
 
 
 When your Azure Data Factory environment is consuming a lot of resources due some unforeseen failing or /long running job s you would want to be informed right away rather then after receiving a serious bill. An ADF environment easily spans 100+ pipelines that execute b. But not all actions may be properly logged as status ‘Completed’ or and get stuck as ‘InProgress’. The current standard Azure generic monitoring signal logic does not cover the full range of scenarios.
@@ -11,7 +11,11 @@ To avoid surprises and to provide more granular insights and alerting, the FullD
 
 todo:  
 1) Insert pictures of overall architecture ( adf-> FD monitor -> SQLDB -> sendgrid)  
-2) Inserrt picture of a API call example:
+
+The API call to use: 
+POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/queryPipelineRuns?api-version=2018-06-01
+
+For more information see also: https://docs.microsoft.com/en-us/rest/api/datafactory/pipelineruns/querybyfactory
 
 ![image](https://user-images.githubusercontent.com/79724599/109359528-a224e600-78ab-11eb-8666-37e4041e8037.png)
 
@@ -25,7 +29,9 @@ The ADF Monitoring utility will update table [internal].[AzureADFPipeLinesExecut
 Figure 2: Sample of the persisted ADF pipeline details
 
 
-The typical scenario to keep an eye on cost, in addition to setting is by levering Azure cost alerts. HoweverHowever, many Azure customers may not have direct insights to their azure cost metrics due to their subscription type, therefor Azure cost alerts might not be an adequate alternative to monitor ADF consumption. In those cases this monitoring approach to check runtime durations direct could be especially of interest to you! 
+The typical scenario to keep an eye on cost is by levering Azure cost alerts. However, many Azure customers may not have direct insights to their azure cost metrics due to their Azure subscription type where a few days delay in cost insights is typical. Therefor Azure cost alerts might not be an adequate alternative to monitor ADF consumption. 
+
+Our monitoring approach to check Pipeline runtime duration in near-realtime on a granular level are a great alternative! 
 
 
 ## Installation
