@@ -8,9 +8,7 @@ When your Azure Data Factory environment is consuming a lot of resources due som
 
 To avoid surprises and to provide more granular insights and alerting, the FullData team developed a simple and efficient service that will email you when the duration of pipeline activities exceeds 2x the average duration or any other configurable alarm threshold that you as user can set by querying by querying the Azure management API directly. This is more reliable than leveraging the Azure Log Analytics data as source.
 
-
-todo:  
-1) Insert pictures of overall architecture ( adf-> FD monitor -> SQLDB -> sendgrid)  
+![image](https://user-images.githubusercontent.com/79724599/109487511-4bd1c600-7aaa-11eb-85e7-6d10af30b584.png)
 
 The API call to use: 
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/queryPipelineRuns?api-version=2018-06-01
