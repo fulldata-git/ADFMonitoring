@@ -70,7 +70,7 @@ Please make sure to update tests as appropriate.
 
 ## Full Data ADF Monitoring - The complete solution
 
-In addition to the gathering the base ADF monitoring data we can help you to visualize trends and resolve ADF pipeline challenges to minimize cost and maximize efficiency.
+In addition to the gathering the base ADF monitoring data we can help you to visualize trends and resolve ADF pipeline challenges on a monthly subscription basis to minimize cost and maximize efficiency. For support please contact us at info@fulldata.nl or visit our website https://fulldata.nl to know more.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
