@@ -61,7 +61,7 @@ namespace MonitoringGit
             #region FilterClause and Run Parameters
             RunQueryFilter queryFilter = new RunQueryFilter()
             {
-                Operand = "RunStart",
+                Operand = "Status",
                 OperatorProperty = "Equals",
                 Values = new List<string> { "InProgress" }
             };
